@@ -1,0 +1,120 @@
+.intro {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/content/nuestra.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 92px 40px;
+  }
+
+  &__title {
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 0 50px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 0 20px;
+  }
+
+  &__btn {
+    max-width: 292px;
+    width: 100%;
+    border-radius: 2px;
+    background: rgb(210, 0, 0);
+    padding: 17px;
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    transition: .3s;
+  }
+
+  &__btn:hover {
+    background: rgb(224, 0, 0);
+  }
+
+  &__text {
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+    margin: 0;
+    max-width: 800px;
+    width: 100%;
+    align-self: end;
+  }
+
+  @media screen and (max-width: 1280px) {
+    &__title {
+      font-size: 45px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    background-position: 70%;
+
+    &__content {
+      padding: 70px 45px;
+    }
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    &__info {
+      flex-direction: column-reverse;
+      gap: 48px 0;
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &__btn {
+      max-width: 320px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__title {
+      font-size: 28px;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    &__content {
+      padding: 60px 35px;
+    }
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+}

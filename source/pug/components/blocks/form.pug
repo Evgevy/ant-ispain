@@ -1,0 +1,36 @@
+mixin form()
+    section.form 
+        .form__content
+            .form__inner
+                .form__form 
+                    h2.form__title Rellene el formulario <span class="form__title-text">para contáctenos</span>
+                    p.form__desc Deje su solicitud y nuestro especialista se pondrá en contacto con usted lo antes posible
+                    form(method="post")
+                        +custom-input({
+                            label: "Su nombre",
+                            type: "text",
+                            name: "name",
+                            placeholder: "You Name"
+                        }).form__input
+                        .form__box
+                            +custom-input({
+                                label: "Número de teléfono",
+                                type: "tel",
+                                name: "phone",
+                                placeholder: "(___)-___-__-__"
+                            }).form__input
+                            +custom-input({
+                                label: "Correo electrónico",
+                                type: "email",
+                                name: "email-adress",
+                                placeholder: "Email"
+                            }).form__input
+                        +custom-textarea({
+                            label: "Su pregunta",
+                            name: "question",
+                            placeholder: "Message"
+                        }).form__input-text
+                        button(type="submit").form__btn Enviar
+                        p.form__agreement Al hacer clic en el botón “Enviar”, usted acepta la política de procesamiento de datos personales
+                .form__images 
+                    img(src="img/content/form-foto.webp").form__img 
