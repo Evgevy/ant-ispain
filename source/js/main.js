@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+// Слайдер с навигацией в виде картинок //
 
 const swiper1 = new Swiper('.swiper-container', {
   loop: false,
@@ -125,7 +125,63 @@ const swiper1 = new Swiper('.swiper-container', {
 const swiper2 = new Swiper(".swiper-thumbs", {
   spaceBetween: 10,
   watchSlidesProgress: true,
-});*/
+});
+
+// Подключение слайдера на определенном брейкпоинте //
+
+var init = false;
+  var swiper;
+  function swiperCard() {
+    if (window.innerWidth <= 768) {
+      if (!init) {
+        init = true;
+        swiper = new Swiper('.articles__slider', {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+          observer: true,
+          observeParents: true,
+          observeSlideChildren: true,
+          autoHeight: true,
+          calculateHeight: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
+        });
+      }
+    } else if (init) {
+      swiper.destroy();
+      init = false;
+    }
+  }
+
+  swiperCard();
+  window.addEventListener("resize", swiperCard);
+  
+  
+  // Закрытие элемента по клику и сохранение состояния закрытия после перезагрузки страницы //
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const block = document.getElementById("block");
+    const closeButton = document.getElementById("closeButton");
+    const openButton = document.getElementById("openButton");
+
+    if (localStorage && localStorage.hasOwnProperty('blockHidden')) {
+        if (localStorage.getItem("blockHidden") === "true") {
+            block.style.display = "none";
+        }
+    }
+
+    closeButton.addEventListener("click", function () {
+        block.style.display = "none";
+        localStorage.setItem("blockHidden", "true");
+    });
+
+    openButton.addEventListener("click", function () {
+        block.style.display = "block";
+        localStorage.setItem('blockHidden', 'false');
+    })
+}); */
 
 
 

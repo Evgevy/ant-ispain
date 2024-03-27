@@ -459,7 +459,7 @@
 
   &__phone {
     color: rgb(210, 0, 0);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 100%;
     font-family: Inter, sans-serif;
@@ -479,6 +479,10 @@
       line-height: 16px;
     }
 
+    @include vp-389 {
+      font-size: 18px;
+    }
+
     @include hover-focus {
       color: rgb(224, 0, 0);
     }
@@ -491,7 +495,7 @@
   &__email {
     color: rgb(210, 0, 0);
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 100%;
 
@@ -510,6 +514,7 @@
     }
 
     @include vp-389 {
+      font-size: 18px;
       margin: 0 0 20px;
     }
 
