@@ -177,13 +177,10 @@ $(document).ready(function () {
 })
 
 
-/*$(document).ready(function () {
-  $(".pipe-machines__link").click(function () {
-
-    $(this).siblings(".pipe-machines__sublist ").toggleClass("pipe-machines__sublist--open")
-
-  })
-
+/*const btnClose = document.querySelector('.header__btn-hach');
+const mainMenu = document.querySelector('.header');
+btnClose.addEventListener('click', function () {
+  mainMenu.classList.remove('is-open');
 })*/
 
 

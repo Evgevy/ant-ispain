@@ -14,6 +14,10 @@ mixin header(headerMods, currentUrl)
             span
             span
             span
+          button(type="button").header__btn-hach
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.73336 23.564L0.435913 22.2666L10.7026 11.9999L0.435913 1.73324L1.73336 0.435791L12 10.7025L22.2667 0.435791L23.5641 1.73324L13.2975 11.9999L23.5641 22.2666L22.2667 23.564L12 13.2974L1.73336 23.564Z" fill="#D20000"/>
+            </svg>
           .main-nav__menu
             <ul class="main-nav__list" data-header-accordion>
               <li class="main-nav__item"><a class="main-nav__link" href="#">Sobre nosotros</a>
@@ -22,17 +26,17 @@ mixin header(headerMods, currentUrl)
                 <a class="main-nav__link" href="#">Productos</a>
                 <ul class="main-nav__sublist">
                   <li class="main-nav__subitem">
-                    <a class="main-nav__sublink" href="#">SIERRAS
+                    <a class="main-nav__sublink main-nav__sublink--active" href="#">SIERRAS
                       <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.13331 4.49328L3.81997 3.17995L1.67997 1.03995C1.22664 0.593285 0.453308 0.913285 0.453308 1.55328V5.70662V9.44662C0.453308 10.0866 1.22664 10.4066 1.67997 9.95328L5.13331 6.49995C5.68664 5.95328 5.68664 5.04662 5.13331 4.49328Z" fill="#1A1A1A"/>
                       </svg>
                     </a>
-                    <ul class="main-nav__sublist1">
+                    <ul class="main-nav__sublist1 main-nav__sublist1--active">
                       <li class="main-nav__subitem1">
                         <a class="main-nav__sublink1" href="#">Sierras de cinta de corte recto horizontal</a>
                       </li>
                       <li class="main-nav__subitem1">
-                        <a class="main-nav__sublink1" href="#">Sierrasde cinta horizontales de corte a inglete</a>
+                        <a class="main-nav__sublink1 main-nav__sublink1--active" href="#">Sierrasde cinta horizontales de corte a inglete</a>
                       </li>
                       <li class="main-nav__subitem1">
                         <a class="main-nav__sublink1" href="#">Sierras de cinta verticales</a>

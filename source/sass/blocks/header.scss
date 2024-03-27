@@ -14,12 +14,48 @@
   background: transparent;
 }
 
+.header__btn-hach {
+  display: block;
+
+  svg {
+    display: none;
+  }
+
+}
+
+.header.is-open .main-nav {
+  position: relative;
+
+  .header__btn-hach {
+    svg {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+
+  .header__btn-hach:hover {
+    svg {
+      path {
+        fill: rgb(224, 0, 0);
+      }
+    }
+  }
+}
+
+
+
 .header.is-open .main-nav__toggle span:nth-child(1) {
-  top: 20px;
+  /*top: 20px;
   -webkit-transform: rotate(-47deg) translate(-7px, 4px) !important;
   -ms-transform: rotate(-45deg) translate(0, -50%);
   transform: rotate(-45deg) translate(0, -50%);
-  background: rgb(210, 0, 0);
+  background: rgb(210, 0, 0);*/
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header.is-open .main-nav__toggle span:nth-child(2) {
@@ -28,11 +64,13 @@
 }
 
 .header.is-open .main-nav__toggle span:nth-child(3) {
-  top: 20px !important;
+  /*top: 20px !important;
   -webkit-transform: rotate(45deg) translate(0, 50%);
   -ms-transform: rotate(45deg) translate(0, 50%);
   transform: rotate(45deg) translate(0, 50%);
-  background: rgb(210, 0, 0);
+  background: rgb(210, 0, 0);*/
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header.is-open .main-nav__menu {
@@ -303,7 +341,6 @@
 
 .main-nav__phone {
 
-  font-size: 16px;
   font-weight: 600;
   line-height: 100%;
   -webkit-transition: color 0.3s ease;
@@ -320,7 +357,6 @@
 .main-nav__email {
   color: #c20000;
   font-family: Inter;
-  font-size: 16px;
   font-weight: 600;
   line-height: 100%;
   -webkit-transition: color 0.3s ease;
@@ -593,11 +629,6 @@
     font-size: 16px;
   }
 
-  .main-nav__email,
-  .main-nav__phone {
-    font-size: 16px;
-    line-height: 16px;
-  }
 }
 
 

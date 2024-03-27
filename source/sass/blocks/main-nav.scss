@@ -292,7 +292,7 @@
   &__sublist {
     z-index: 10;
     position: absolute;
-    top: calc(100% + 30px);
+    top: calc(100% + 25px);
     left: -60px;
     //display: block;
     width: max-content;
@@ -418,7 +418,7 @@
     width: 0;
     background-color: rgb(210, 0, 0);
     transition: 0.4s;
-    margin: 0 auto 8px;
+    margin: 8px auto 0;
   }
 
   &__link:hover:after,
@@ -459,7 +459,7 @@
 
   &__phone {
     color: rgb(210, 0, 0);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 100%;
     font-family: Inter, sans-serif;
@@ -475,7 +475,7 @@
     }
 
     @include vp-767 {
-      font-size: 16px;
+      font-size: 20px;
       line-height: 16px;
     }
 
@@ -491,7 +491,7 @@
   &__email {
     color: rgb(210, 0, 0);
     font-family: Inter;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 100%;
 
@@ -505,7 +505,7 @@
     }
 
     @include vp-767 {
-      font-size: 16px;
+      font-size: 20px;
       line-height: 16px;
     }
 
@@ -537,6 +537,7 @@
     &__sublink {
       svg {
         transition: .2s;
+        transform: rotate(90deg);
       }
     }
 
@@ -570,6 +571,37 @@
     .main-nav__sublink {
       min-width: 0;
       gap: 0 10px;
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    .main-nav__sublink:hover {
+      svg {
+        transform: rotate(270deg);
+      }
+    }
+
+    .main-nav__sublink--active {
+      color: rgb(210, 0, 0);
+      border-bottom: 1px solid rgb(210, 0, 0);
+
+      svg {
+        transform: rotate(270deg);
+
+        path {
+          fill: rgb(210, 0, 0);
+        }
+      }
+    }
+
+    .main-nav__sublist1--active {
+      display: block;
+    }
+
+    .main-nav__sublink1--active {
+      color: rgb(210, 0, 0);
     }
 
     &__link:after {
@@ -579,6 +611,13 @@
     .main-nav__sublist1 {
       width: 100%;
       min-width: 0;
+    }
+
+    @media screen and (max-width: 560px) {
+      &__contacts {
+        flex-direction: column-reverse;
+        align-items: start;
+      }
     }
 
     /*.main-nav__sublink1 {

@@ -220,7 +220,7 @@
 
     &__inner {
       grid-template-columns: 1fr 1fr;
-      margin-bottom: 170px;
+      margin-bottom: 125px;
     }
 
     &__links {
@@ -232,8 +232,9 @@
 
     &__adress-protect {
       position: absolute;
-      bottom: -120px;
+      bottom: -80px;
       padding-right: 10px;
+      margin: 0;
     }
 
     &__category {
@@ -289,7 +290,8 @@
       margin: 40px 0 130px;
     }
 
-    &__adress-protect {
+    &__adress-protect,
+    &__link-protect {
       font-size: 16px;
     }
 
@@ -318,6 +320,14 @@
       margin-bottom: 40px;
     }
 
+    &__links {
+      margin-bottom: 0;
+    }
+
+    &__contacts {
+      margin-bottom: 0;
+    }
+
     &__adress-protect {
       position: static;
       margin: 20px 0 0;
@@ -327,6 +337,7 @@
     &__category {
       order: 4;
       margin: 0;
+      gap: 20px;
     }
 
     &__menu {

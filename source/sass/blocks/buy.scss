@@ -28,6 +28,7 @@
         position: absolute;
         right: 0;
         top: 0;
+        padding-top: 20px;
     }
 
     &__list {
@@ -123,6 +124,7 @@
 
         .machine__text {
             max-width: 650px;
+            padding-top: 0px;
         }
     }
 
