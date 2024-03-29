@@ -8,15 +8,15 @@ mixin pipe-machines()
                         <svg width="100" height="4" viewBox="0 0 100 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="100" height="4" fill="#D20000"/>
                         </svg>
-                p.machine__text SIERRAS
+                p.machine__text SIERRAS 
             .pipe-machines__inner 
                 ul.pipe-machines__list 
                     li.pipe-machines__item 
-                        a(href="#").pipe-machines__link.pipe-machines__link--active SIERRAS
+                        a(href="#").pipe-machines__link SIERRAS
                             <svg width="11" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.13331 4.49328L3.81997 3.17995L1.67997 1.03995C1.22664 0.593285 0.453308 0.913285 0.453308 1.55328V5.70662V9.44662C0.453308 10.0866 1.22664 10.4066 1.67997 9.95328L5.13331 6.49995C5.68664 5.95328 5.68664 5.04662 5.13331 4.49328Z" fill="#1A1A1A"/>
                             </svg>
-                        ul.pipe-machines__sublist.pipe-machines__sublist--active
+                        ul.pipe-machines__sublist.pipe-machines__sublist
                             li.pipe-machines__item-depth1 
                                 a(href="#").pipe-machines__link-depth1 Sierras de cinta de corte recto horizontal
                             li.pipe-machines__item-depth1 
@@ -321,22 +321,4 @@ mixin pipe-machines()
                                     //li.buy__text Y-axis travel : 400mm/400mm
                                     //li.buy__text Z-axis travel : 300mm/350mm
                                 button(type="button").buy__item-btn VER MÁS     
-            ul.pagination
-                li.page-number-prev 
-                    a(href="#!").pipe-machines__page-number-prev
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" transform="matrix(-1 0 0 1 40 0)" fill="#D20000"/>
-                        <path d="M24 11L16 19.5L24 28" stroke="white" stroke-width="2"/>
-                        </svg>
-                li.page-item
-                    a(href="#page").page-number 1
-                li.page-item
-                    a(href="#page").page-number.page-number--current 2
-                li.page-item
-                    a(href="#page").page-number 3
-                li.page-item
-                    a(href="#!").page-number-next
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" fill="#D20000"/>
-                        <path d="M16 11L24 19.5L16 28" stroke="white" stroke-width="2"/>
-                        </svg>
+            +pagination 

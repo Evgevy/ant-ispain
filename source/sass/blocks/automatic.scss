@@ -34,11 +34,6 @@
         }
     }
 
-    .pipe-machines__link:hover {
-        svg {
-            transform: rotate(270deg);
-        }
-    }
 
     .pipe-machines__link-depth1--active {
         color: #d20000;
@@ -61,34 +56,7 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .pagination {
-        display: flex;
-        justify-content: flex-end;
-        gap: 0 30px;
-    }
 
-    .page-number {
-        color: rgb(128, 128, 128);
-        font-family: Inter;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 140%;
-        border: 1px solid rgb(217, 217, 217);
-        padding: 6px 15px;
-
-        &--current {
-            border: 1px solid rgb(210, 0, 0);
-        }
-    }
-
-    .page-number-prev:hover,
-    .page-number-next:hover {
-        svg {
-            rect {
-                filter: brightness(1.5);
-            }
-        }
-    }
 
     @media screen and (max-width: 1280px) {
         .buy__list {
@@ -124,32 +92,17 @@
 
     }
 
-    /*@media screen and (max-width: 768px) {
-        .machine__titles {
-            margin-bottom: 30px;
-        }
-    }*/
-
     @media screen and (max-width: 600px) {
         .buy__list {
             display: grid;
             grid-template-columns: 1fr;
         }
 
-        .pagination {
-            gap: 0 16px;
-        }
     }
 
     @media screen and (max-width: 390px) {
         .machine__text {
             font-size: 24px;
-        }
-    }
-
-    @media screen and (max-width: 340px) {
-        .pagination {
-            gap: 0 6px;
         }
     }
 

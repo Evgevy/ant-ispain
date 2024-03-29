@@ -8,6 +8,10 @@
         margin-bottom: 50px;
     }
 
+    .about-page__desc>p {
+        margin: 0;
+    }
+
     &__inner {
         display: flex;
         gap: 20px;
@@ -107,8 +111,8 @@
         &__title {
             font-size: 22px;
             margin-bottom: 30px;
-        } 
-        
+        }
+
         &__text {
             font-size: 16px;
             margin-bottom: 30px;
@@ -287,7 +291,7 @@
         }
     }*/
 
-   
 
-    
+
+
 }

@@ -226,22 +226,4 @@ mixin automatic()
                                     li.buy__text H:250~500 mm W:350~800 mm
                                     li.buy__text Length: 1000~6000 mm
                                 button(type="button").buy__item-btn VER MÁS    
-            ul.pagination
-                li.page-number-prev 
-                    a(href="#!").pipe-machines__page-number-prev
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" transform="matrix(-1 0 0 1 40 0)" fill="#D20000"/>
-                        <path d="M24 11L16 19.5L24 28" stroke="white" stroke-width="2"/>
-                        </svg>
-                li.page-item
-                    a(href="#page").page-number 1
-                li.page-item
-                    a(href="#page").page-number.page-number--current 2
-                li.page-item
-                    a(href="#page").page-number 3
-                li.page-item
-                    a(href="#!").page-number-next
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" fill="#D20000"/>
-                        <path d="M16 11L24 19.5L16 28" stroke="white" stroke-width="2"/>
-                        </svg>
+            +pagination

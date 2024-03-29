@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Слайдер с навигацией в виде картинок //
 
 const swiper1 = new Swiper('.swiper-container', {
+  slidesPerView: 1,
   loop: false,
   pagination: {
     el: '.swiper-pagination',
@@ -41,6 +42,7 @@ const swiper1 = new Swiper('.swiper-container', {
 });
 
 const swiper2 = new Swiper(".swiper-thumbs", {
+  slidesPerView: 2,
   spaceBetween: 10,
   watchSlidesProgress: true,
 });
@@ -233,11 +235,12 @@ $(document).ready(function () {
 })
 
 
-/*const btnClose = document.querySelector('.header__btn-hach');
-const mainMenu = document.querySelector('.header');
-btnClose.addEventListener('click', function () {
-  mainMenu.classList.remove('is-open');
+/*$(document).ready(function () {
+  $(".pipe-machines__item").click(function () {
+    $(this).siblings(".pipe-machines__sublist").toggleClass(".pipe-machines__sublist--active")
+  })
 })*/
+
 
 
 

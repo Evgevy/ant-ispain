@@ -95,34 +95,7 @@
         object-fit: cover;
     }
 
-    .pagination {
-        display: flex;
-        justify-content: flex-end;
-        gap: 0 30px;
-    }
 
-    .page-number {
-        color: rgb(128, 128, 128);
-        font-family: Inter;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 140%;
-        border: 1px solid rgb(217, 217, 217);
-        padding: 6px 15px;
-
-        &--current {
-            border: 1px solid rgb(210, 0, 0);
-        }
-    }
-
-    .page-number-prev:hover,
-    .page-number-next:hover {
-        svg {
-            rect {
-                filter: brightness(1.5);
-            }
-        }
-    }
 
     .articles__mobile {
         display: none;
@@ -232,11 +205,6 @@
         }
     }
 
-    @media screen and (max-width: 600px) {
-        .pagination {
-            gap: 0 16px;
-        }
-    }
 
     @media screen and (max-width: 390px) {
         .articles__date {
@@ -252,12 +220,5 @@
             padding: 0 20px;
         }
     }
-
-    @media screen and (max-width: 340px) {
-        .pagination {
-            gap: 0 6px;
-        }
-    }
-
 
 }
