@@ -4,17 +4,32 @@
     }
 
     .buy__titles {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 0.6fr 1.2fr;
+        border-bottom: 2px solid rgb(217, 217, 217);
+        gap: 10px;
+        margin-bottom: 50px;
+        align-items: center;
+        position: relative;
     }
 
-    /*.machine__titles {
-        display: flex;
-        margin: 0;
-    }*/
+    .machine__line--moby {
+        display: none;
+    }
+
+    .machine__line {
+        position: absolute;
+        bottom: -8px;
+    }
+
+    .machine__titles {
+        //display: flex;
+        margin-bottom: -8px;
+    }
 
     .machine__title {
         border-bottom: none;
+        padding-bottom: none;
     }
 
     .machine__text {
@@ -24,7 +39,9 @@
         font-weight: 700;
         line-height: 140%;
         text-align: right;
-        margin: 0 0 0;
+        margin: 0px 0 0;
+        text-transform: uppercase;
+        justify-self: end;
     }
 
     &__inner {
@@ -77,10 +94,6 @@
         color: rgb(210, 0, 0);
     }
 
-    /*&__item >&__sublist {
-        display: flex;
-    }*/
-
     &__link {
         svg {
             transition: .2s;
@@ -101,10 +114,10 @@
         flex-direction: column;
         gap: 22px;
         display: none;
+    }
 
-        &--active {
-            display: flex;
-        }
+    .pipe-machines__sublist.show {
+        display: flex;
     }
 
     &__link-depth1 {
@@ -147,26 +160,41 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    /*@media screen and (max-width: 768px) {
         .machine__titles {
             margin-bottom: 30px;
         }
-    }
+    }*/
 
     @media screen and (max-width: 600px) {
-        .buy__list {
-            display: grid;
+        .buy__titles {
             grid-template-columns: 1fr;
+            border-bottom: none;
         }
 
-        .machine__titles {
-            margin-bottom: 20px;
+        .machine__title {
+            margin-bottom: -3px;
+            border-bottom: 2px solid rgb(217, 217, 217);
         }
 
         .machine__text {
-            position: static;
             text-align: left;
-            margin-bottom: 32px;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .machine__line--moby {
+            display: flex;
+        }
+
+        .machine__line {
+            display: none;
+
+        }
+
+        .buy__list {
+            display: grid;
+            grid-template-columns: 1fr;
         }
 
 

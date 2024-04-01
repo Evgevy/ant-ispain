@@ -253,10 +253,9 @@
   position: absolute;
   top: calc(100% + 10px);
   left: -30px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  min-width: 317px;
+
+  //width: max-content;
+  min-width: 530px;
   margin: 0;
   padding: 20px 30px 30px;
   list-style: none;

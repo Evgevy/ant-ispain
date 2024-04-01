@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Слайдер с навигацией в виде картинок //
 
-const swiper1 = new Swiper('.swiper-container', {
+/*const swiper1 = new Swiper('.swiper-container', {
   slidesPerView: 1,
   loop: false,
   pagination: {
@@ -45,6 +45,23 @@ const swiper2 = new Swiper(".swiper-thumbs", {
   slidesPerView: 2,
   spaceBetween: 10,
   watchSlidesProgress: true,
+});*/
+
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
 });
 
 
@@ -236,10 +253,57 @@ $(document).ready(function () {
 
 
 /*$(document).ready(function () {
-  $(".pipe-machines__item").click(function () {
-    $(this).siblings(".pipe-machines__sublist").toggleClass(".pipe-machines__sublist--active")
+  $(".pipe-machines__link-text").click(function () {
+    $(this).siblings(".pipe-machines__sublist").toggleClass("pipe-machines__sublist--active")
   })
 })*/
+
+
+
+
+/*let link = document.querySelectorAll('.pipe-machines__link');
+let dropdownMenu = document.querySelectorAll('.pipe-machines__sublist');
+
+let clicks = 0;
+
+link.addEventListener('click', function (event) {
+  event.preventDefault();
+  clicks++;
+
+  if (clicks === 1) {
+
+    dropdownMenu.style.display = 'flex';
+  } else {
+
+    window.location = link.href;
+  }
+});*/
+
+
+$(document).ready(function () {
+  $('.pipe-machines__link').on('click', function (e) {
+    e.preventDefault();
+
+    const menu = $(this).next('.pipe-machines__sublist');
+    if (!menu.hasClass('show')) {
+      $('.pipe-machines__sublist').removeClass('show');
+      menu.addClass('show');
+    } else {
+      window.location.href = $(this).attr('href');
+    }
+
+    $('.pipe-machines__link').removeClass('pipe-machines__link--active');
+    $(this).addClass('pipe-machines__link--active');
+  });
+
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.pipe-machines__link, .pipe-machines__sublist').length) {
+      $('.pipe-machines__sublist').removeClass('show');
+      $('.pipe-machines__link').removeClass('pipe-machines__link--active');
+    }
+  });
+});
+
 
 
 

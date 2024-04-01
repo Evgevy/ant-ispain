@@ -1,7 +1,7 @@
 export class HeaderAccordion {
   constructor() {
     this._menu = document.querySelector('[data-header-accordion]');
-    this._breakpointMedia = window.matchMedia('(max-width: 1199px)');
+    this._breakpointMedia = window.matchMedia('(max-width: 1024px)');
 
     this._linkClickHandler = this._linkClickHandler.bind(this);
     this._breakpointChecker = this._breakpointChecker.bind(this);
@@ -37,11 +37,17 @@ export class HeaderAccordion {
     if (this._breakpointMedia.matches) {
       menuItems.forEach((item) => {
         const link = item.querySelector('.main-nav__link');
+        if (!link) {
+          link = item.querySelector('.main-nav__sublink');
+        }
         link.addEventListener('click', this._linkClickHandler);
       });
     } else {
       menuItems.forEach((item) => {
         const link = item.querySelector('.main-nav__link');
+        if (!link) {
+          link = item.querySelector('.main-nav__sublink');
+        }
         link.removeEventListener('click', this._linkClickHandler);
 
         if (item.classList.contains('is-active')) {

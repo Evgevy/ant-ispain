@@ -4,19 +4,23 @@ mixin pipe-machines()
             .buy__titles
                 .machine__titles 
                     h1.machine__title Productos
-                    .machine__line
+                    .machine__line--moby
                         <svg width="100" height="4" viewBox="0 0 100 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="100" height="4" fill="#D20000"/>
                         </svg>
-                p.machine__text SIERRAS 
+                p.machine__text Sierras 
+                .machine__line
+                    <svg width="100" height="4" viewBox="0 0 100 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="4" fill="#D20000"/>
+                    </svg>
             .pipe-machines__inner 
                 ul.pipe-machines__list 
                     li.pipe-machines__item 
-                        a(href="#").pipe-machines__link SIERRAS
+                        a(href="index.html").pipe-machines__link SIERRAS
                             <svg width="11" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.13331 4.49328L3.81997 3.17995L1.67997 1.03995C1.22664 0.593285 0.453308 0.913285 0.453308 1.55328V5.70662V9.44662C0.453308 10.0866 1.22664 10.4066 1.67997 9.95328L5.13331 6.49995C5.68664 5.95328 5.68664 5.04662 5.13331 4.49328Z" fill="#1A1A1A"/>
                             </svg>
-                        ul.pipe-machines__sublist.pipe-machines__sublist
+                        ul.pipe-machines__sublist
                             li.pipe-machines__item-depth1 
                                 a(href="#").pipe-machines__link-depth1 Sierras de cinta de corte recto horizontal
                             li.pipe-machines__item-depth1 

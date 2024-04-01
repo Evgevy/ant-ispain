@@ -293,10 +293,10 @@
     z-index: 10;
     position: absolute;
     top: calc(100% + 25px);
-    left: -60px;
+    left: -100px;
     //display: block;
-    width: max-content;
-    min-width: 435px;
+    //width: max-content;
+    //min-width: 435px;
     margin: 0;
     padding: 30px 20px 50px 50px;
     margin-top: -10px;
@@ -389,26 +389,18 @@
     z-index: 0;
     position: absolute;
     top: -10px;
-    left: 400px;
-    height: 547px;
+    left: 460px;
+    min-height: 570px;
     width: max-content;
-    min-width: 335px;
+    min-width: 340px;
     margin: 0;
     border: none;
     padding: 20px 20px 50px 20px;
-    //margin-left: -20px;
     box-shadow: 3px 2px 2px 2px rgba(80, 80, 80, 0.1);
     background: rgb(255, 255, 255);
     list-style: none;
     margin-top: -20px;
-    //border-radius: 0 0 6px 0px;
-    //background-color: $color-default-white;
-    //box-shadow: 0 4px 5px 0 rgba($color-matterhorn, 0.1);
-
     transition: .3s;
-
-    /*opacity: 0;
-    visibility: hidden;*/
   }
 
   &__link:after {
@@ -527,7 +519,13 @@
     }
   }
 
-  @media screen and (max-width: 1420px) {
+  @media screen and (max-width: 1570px) {
+    &__sublist1 {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1450px) {
     &__sublist1 {
       z-index: 5;
       left: -20px;
@@ -536,7 +534,7 @@
       box-shadow: none;
       position: relative;
       padding: 10px 20px;
-      height: auto;
+      min-height: auto;
     }
 
     &__sublink {
