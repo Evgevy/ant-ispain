@@ -36,7 +36,7 @@ export class HeaderAccordion {
 
     if (this._breakpointMedia.matches) {
       menuItems.forEach((item) => {
-        const link = item.querySelector('.main-nav__link');
+        let link = item.querySelector('.main-nav__link');
         if (!link) {
           link = item.querySelector('.main-nav__sublink');
         }
@@ -44,7 +44,7 @@ export class HeaderAccordion {
       });
     } else {
       menuItems.forEach((item) => {
-        const link = item.querySelector('.main-nav__link');
+        let link = item.querySelector('.main-nav__link');
         if (!link) {
           link = item.querySelector('.main-nav__sublink');
         }

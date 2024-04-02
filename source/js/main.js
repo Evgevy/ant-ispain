@@ -48,10 +48,20 @@ const swiper2 = new Swiper(".swiper-thumbs", {
 });*/
 
 var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 10,
-  slidesPerView: 4,
+  spaceBetween: 40,
+  slidesPerView: 3,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    320: {
+      spaceBetween: 20,
+    },
+
+    768: {
+      spaceBetween: 40,
+    }
+
+  }
 });
 var swiper2 = new Swiper(".mySwiper2", {
   spaceBetween: 10,
