@@ -116,6 +116,12 @@
     font-weight: 400;
     line-height: 140%;
     margin: 0;
+    transition: .2s;
+  }
+
+  &__contacts-mail:hover,
+  &__contacts-phone:hover {
+    color: rgb(210, 0, 0);
   }
 
   &__category {
@@ -153,7 +159,11 @@
     display: inline-block;
   }
 
-  .footer__item>a:hover {
+  /*.footer__item>a:hover {
+    color: rgb(210, 0, 0);
+  }*/
+
+  .footer__menu>li>a:hover {
     color: rgb(210, 0, 0);
   }
 

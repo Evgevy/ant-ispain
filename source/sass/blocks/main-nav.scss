@@ -2,6 +2,10 @@
   width: 100%;
   margin: 0 0 0 40px;
 
+  @media screen and (max-width: 1370px) {
+    margin: 0 0 0 20px;
+  }
+
   @include vp-1279 {
     margin: 0 0 0 20px;
   }
@@ -75,7 +79,7 @@
       justify-content: flex-end;
     }
 
-    @include vp-1023 {
+    @media screen and (max-width: 1251px) {
       z-index: 10;
       position: fixed;
       flex-direction: column;
@@ -108,13 +112,22 @@
 
   &__list {
     display: flex;
-    gap: 20px;
+    gap: 0 50px;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
     list-style: none;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 1439px) {
+      gap: 0 33px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 1280px) {
+      gap: 0 25px;
+    }
 
     @include vp-1023 {
       flex-direction: column;
@@ -123,19 +136,17 @@
 
   &__item {
     position: relative;
-    margin: 0 30px 0 0;
+    margin: 0;
 
     @include vp-1439 {
-      margin: 0 30px 0 0;
+      margin: 0;
     }
 
     @include vp-1279 {
-      margin: 0 20px 0 0;
+      margin: 0;
     }
 
-    @include vp-1023 {
-      margin: 0 0 0px;
-    }
+
 
     &.menu-item-has-children {
       // .main-nav__link {
@@ -212,12 +223,6 @@
           }
         }*/
       }
-
-      .main-nav__sublist {
-        @include vp-1023 {
-          display: block;
-        }
-      }
     }
 
     &:last-child {
@@ -293,12 +298,14 @@
     z-index: 10;
     position: absolute;
     top: calc(100% + 25px);
-    left: -100px;
-    //display: block;
+    left: -300px;
+    display: flex;
+    gap: 20px 50px;
     //width: max-content;
-    //min-width: 435px;
+    max-width: 535px;
+    width: 100%;
     margin: 0;
-    padding: 30px 20px 50px 50px;
+    padding: 30px 30px 50px 30px;
     margin-top: -10px;
     list-style: none;
 
@@ -330,6 +337,11 @@
     }
   }
 
+  &__sublist-box {
+    max-width: 450px;
+    width: 100%;
+  }
+
 
   &__subitem {
     margin: 0 0 20px;
@@ -352,12 +364,17 @@
     line-height: 140%;
     border-bottom: 1px solid rgb(217, 217, 217);
     padding-bottom: 8px;
-    //margin-right: 30px;
     transition: .3s;
+
+    svg {
+      transition: .2s;
+      flex-shrink: 0;
+      transform: rotate(90deg);
+    }
 
     @include vp-767 {
       font-size: 18px;
-      line-height: 16px;
+      line-height: 130%;
     }
 
     @include hover-focus {
@@ -369,6 +386,8 @@
       }
 
       svg {
+        transform: rotate(270deg);
+
         path {
           fill: rgb(210, 0, 0);
         }
@@ -386,21 +405,33 @@
 
 
   &__sublist1 {
-    z-index: 0;
-    position: absolute;
-    top: -10px;
-    left: 460px;
-    min-height: 570px;
-    width: max-content;
-    min-width: 340px;
-    margin: 0;
+    //z-index: 0;
+    //position: absolute;
+    //top: -10px;
+    //left: 460px;
+    //min-height: 572px;
+    //width: max-content;
+    //min-width: 340px;
+    //margin: 0 0 20px 0;
     border: none;
-    padding: 20px 20px 50px 20px;
-    box-shadow: 3px 2px 2px 2px rgba(80, 80, 80, 0.1);
+    //padding: 20px 20px 50px 20px;
+    //box-shadow: 3px 2px 2px 2px rgba(80, 80, 80, 0.1);
     background: rgb(255, 255, 255);
     list-style: none;
-    margin-top: -20px;
+    //margin-top: -20px;
     transition: .3s;
+
+    width: 100%;
+    max-width: 430px;
+    z-index: 5;
+    left: -20px;
+    top: 0;
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    padding: 10px 20px 40px;
+    margin-bottom: -30px;
+    min-height: auto;
   }
 
   &__link:after {
@@ -436,17 +467,10 @@
       margin: 60px 0 0;
     }
 
-    @media screen and (max-width: 475px) {
+    @media screen and (max-width: 540px) {
       flex-direction: column-reverse;
-      //justify-content: flex-start;
       align-items: start;
     }
-
-    /*@include vp-389 {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }*/
   }
 
   &__phone {
@@ -519,13 +543,26 @@
     }
   }
 
-  @media screen and (max-width: 1570px) {
+  @media screen and (max-width: 1630px) {
+    &__sublist {
+      max-width: 510px;
+    }
+
     &__sublist1 {
       width: 100%;
+      max-width: 430px;
     }
   }
 
-  @media screen and (max-width: 1450px) {
+  @media screen and (max-width: 1460px) {
+    &__sublist {
+      flex-direction: column;
+      min-width: 510px;
+      //max-width: 510px;
+      width: 100%;
+      left: -100px;
+    }
+
     &__sublist1 {
       z-index: 5;
       left: -20px;
@@ -533,7 +570,8 @@
       background-color: transparent;
       box-shadow: none;
       position: relative;
-      padding: 10px 20px;
+      padding: 10px 20px 40px;
+      margin-bottom: -30px;
       min-height: auto;
     }
 
@@ -551,16 +589,20 @@
     }
   }
 
-  @media screen and (max-width: 1065px) {
-    &__sublist {
-      left: -90px;
-    }
-  }
 
-  @media screen and (max-width: 1023px) {
+
+  @media screen and (max-width: 1251px) {
     .main-nav__list {
       //max-width: 900px;
       width: 100%;
+    }
+
+    .main-nav__sublist-box {
+      margin-bottom: 20px;
+    }
+
+    .main-nav__sublist-box:last-child {
+      margin-bottom: 0;
     }
 
     .main-nav__item {
@@ -616,6 +658,12 @@
       min-width: 0;
     }
 
+    /*@media screen and (max-width: 1065px) {
+      &__sublist {
+        left: -90px;
+      }
+    }*/
+
     @media screen and (max-width: 560px) {
       &__contacts {
         flex-direction: column-reverse;
@@ -623,32 +671,6 @@
       }
     }
 
-    /*.main-nav__sublink1 {
-      padding-right: 10px;
-    }
+
   }
-
-  @media screen and (max-width: 500px) {
-    &__contacts {
-      flex-direction: column-reverse;
-      align-items: start;
-    }
-  }
-
-  @media screen and (max-width: 390px) {
-    .main-nav__sublink {
-      font-size: 16px;
-    }
-
-    /*&__phone {
-      font-size: 18px;
-    }*/
-  }
-
-  /*@media screen and (max-width: 350px) {
-    .main-nav__sublink1 {
-      max-width: 200px;
-      width: 100%;
-    }
-  }*/
 }

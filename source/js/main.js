@@ -217,22 +217,27 @@ var init = false;
 const prodBtn = document.querySelectorAll('.view__tab-btn');
 const tabsInfo = document.querySelectorAll('.view__tab-info');
 
+if (prodBtn && tabsInfo) {
+  for (let item of prodBtn) {
+    item.addEventListener('click', function () {
+      for (let element of tabsInfo) {
+        element.classList.remove('view__tab-info--active')
+      }
 
-for (let item of prodBtn) {
-  item.addEventListener('click', function () {
-    for (let element of tabsInfo) {
-      element.classList.remove('view__tab-info--active')
-    }
+      const content = document.querySelector('#' + item.dataset.tab);
+      content.classList.add('view__tab-info--active')
+    })
+  };
 
-    const content = document.querySelector('#' + item.dataset.tab);
-    content.classList.add('view__tab-info--active')
-  })
-};
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  prodBtn[0].classList.add('view__tab-btn--active');
-  //prodBtn[0].style.borderBottom = 'none';
-  tabsInfo[0].classList.add('view__tab-info--active');
+  if (prodBtn[0] && tabsInfo[0]) {
+    prodBtn[0].classList.add('view__tab-btn--active');
+    //prodBtn[0].style.borderBottom = 'none';
+    tabsInfo[0].classList.add('view__tab-info--active');
+  }
 
   let myBtns = document.querySelectorAll('.view__tab-btn');
   myBtns.forEach(function (btn) {
@@ -247,19 +252,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-$(document).ready(function () {
-  $(".popup__close").click(function () {
-    $(".popup").toggleClass("popup--hide")
-  })
 
-  $(".view__btn").click(function () {
-    $(".popup").removeClass("popup--hide")
-  })
 
-  $(".popup__background").click(function () {
-    $(".popup").addClass("popup--hide")
-  })
-})
+// $(document).ready(function () {
+//   $(".popup__close").click(function () {
+//     $(".popup").toggleClass("popup--hide")
+//   })
+
+//   $(".view__btn").click(function () {
+//     $(".popup").removeClass("popup--hide")
+//   })
+
+//   $(".popup__background").click(function () {
+//     $(".popup").addClass("popup--hide")
+//   })
+// })
 
 
 /*$(document).ready(function () {
@@ -315,7 +322,29 @@ $(document).ready(function () {
 });
 
 
+// Кастомный значок play для видео
 
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var video = document.getElementById('myVideo');
+//   var playButton = document.querySelector('.play-button');
+
+//   playButton.addEventListener('click', function() {
+//     if (video.paused) {
+//       video.play();
+//       playButton.style.display = 'none';
+//           } else {
+//       video.pause();
+//     }
+//   });
+
+//   video.addEventListener('click', function() {
+//     if (!video.paused) {
+//       video.pause();
+//       playButton.style.display = 'block';
+//     }
+//   });
+// });
 
 
 

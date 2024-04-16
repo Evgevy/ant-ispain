@@ -27,9 +27,8 @@
 
     .swiper-thumbs {
         max-width: 700px;
-        height: 200px;
+        height: 180px;
         width: 100%;
-        overflow: hidden;
         box-sizing: border-box;
         padding: 30px 0 0;
         margin: 0;
@@ -65,7 +64,7 @@
 
     .mySwiper2 {
         max-width: 560px;
-        height: 400px;
+        height: 350px;
         width: 100%;
         overflow: hidden;
     }
@@ -79,7 +78,7 @@
 
     .swiper-thumbs .swiper-slide {
         width: 200px;
-        height: 155px;
+        height: 150px;
         border: 0.4px solid rgb(128, 128, 128);
         cursor: pointer;
         padding: 10px;
@@ -234,7 +233,7 @@
     &__detail>table>tbody>tr {
         border-bottom: 1px solid rgb(217, 217, 217);
         display: grid;
-        grid-template-columns: 1.2fr 1fr;
+        grid-template-columns: 1.3fr 1.2fr 1.2fr;
         border-collapse: collapse;
     }
 
@@ -253,13 +252,9 @@
         border-bottom: none;
     }
 
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 650px) {
         &__detail>table>tbody>tr>td {
-            font-size: 15px;
-        }
-
-        &__detail>table>tbody>tr {
-            grid-template-columns: 1fr 0.8fr;
+            font-size: 12px;
         }
 
         &__detail>table>tbody>tr>td {
@@ -268,14 +263,16 @@
     }
 
     @media screen and (max-width: 480px) {
-        &__detail>table>tbody>tr>td {
-            font-size: 13px;
+        &__detail>table>tbody>tr {
+            grid-template-columns: 0.9fr 0.9fr 0.7fr;
         }
-    }
 
-    @media screen and (max-width: 350px) {
         &__detail>table>tbody>tr>td {
-            font-size: 11px;
+            padding: 2px 0 2px 2px;
+        }
+
+        &__detail>table>tbody>tr>td {
+            font-size: 9px;
         }
     }
 

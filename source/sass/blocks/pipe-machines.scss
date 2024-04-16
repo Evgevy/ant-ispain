@@ -19,7 +19,7 @@
 
     .machine__line {
         position: absolute;
-        bottom: -5px;
+        bottom: -9px;
     }
 
     .machine__titles {
@@ -96,6 +96,7 @@
 
     &__link {
         svg {
+            flex-shrink: 0;
             transition: .2s;
             transform: rotate(90deg);
         }
@@ -160,16 +161,11 @@
         }
     }
 
-    /*@media screen and (max-width: 768px) {
-        .machine__titles {
-            margin-bottom: 30px;
-        }
-    }*/
-
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         .buy__titles {
             grid-template-columns: 1fr;
             border-bottom: none;
+            margin-bottom: 32px;
         }
 
         .machine__title {
@@ -200,9 +196,23 @@
 
     }
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 450px) {
         .machine__text {
             font-size: 24px;
+        }
+    }
+
+    @media screen and (max-width: 350px) {
+        .machine__text {
+            font-size: 20px;
+        }
+
+        &__link {
+            font-size: 17px;
+        }
+
+        &__link-depth1 {
+            font-size: 15px;
         }
     }
 }
